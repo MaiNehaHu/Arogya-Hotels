@@ -3,7 +3,7 @@ import React from "react";
 
 export const HowItWorks: React.FC = () => {
     return (
-        <section className="py-32 bg-white text-center" id="how-it-works">
+        <section className="py-32 px-4 bg-white text-center" id="how-it-works">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
             <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
                 Ordering from HomeMeal is simple and convenient. Just follow these easy steps.

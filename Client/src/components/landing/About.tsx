@@ -3,6 +3,7 @@
 import { BsChatHeart } from "react-icons/bs";
 import { IoMdTimer } from "react-icons/io";
 import { PiBowlFoodBold } from "react-icons/pi";
+const WhatsAppNumber = import.meta.env.VITE_WHATSAPP_NUMBER
 
 const AboutSection = () => {
     return (
@@ -60,7 +61,7 @@ const AboutSection = () => {
                     {/* CTA Button */}
                     <div>
                         <a
-                            href="https://wa.me/919876543210?text=Hi%20HomeMeal%2C%20I%27d%20like%20to%20order%20today%21"
+                            href={`https://wa.me/${WhatsAppNumber}?text=Hi%2C%20I%27d%20like%20to%20place%20an%20order%21`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-lg transition"

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
+const WhatsAppNumber = import.meta.env.VITE_WHATSAPP_NUMBER
 
 const Foods = [
     {
@@ -53,7 +54,7 @@ const MenuCategories: React.FC = () => {
                                         Starting at ₹{food.price}
                                     </span>
                                     <a
-                                        href="https://wa.me/1234567890"
+                                        href={`https://wa.me/${WhatsAppNumber}?text=Hi%2C%20I%27d%20like%20to%20place%20an%20order%21`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex items-center text-green-500 font-medium hover:underline"

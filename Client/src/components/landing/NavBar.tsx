@@ -1,5 +1,6 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
+const WhatsAppNumber = import.meta.env.VITE_WHATSAPP_NUMBER
 
 const Navbar: React.FC = () => {
     return (
@@ -19,7 +20,7 @@ const Navbar: React.FC = () => {
 
             {/* Order Button */}
             <a
-                href="https://wa.me/1234567890" // replace with actual WhatsApp number
+                href={`https://wa.me/${WhatsAppNumber}?text=Hi%2C%20I%27d%20like%20to%20place%20an%20order%21`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 text-white font-semibold px-5 py-2 rounded-full flex items-center gap-2 hover:bg-green-600 transition"

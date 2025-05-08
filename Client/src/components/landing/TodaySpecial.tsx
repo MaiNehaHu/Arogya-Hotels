@@ -1,5 +1,9 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
+const WhatsAppNumber = import.meta.env.VITE_WHATSAPP_NUMBER
+
+console.log(WhatsAppNumber);
+
 
 interface FoodItem {
     name: string;
@@ -83,7 +87,7 @@ const TodaySpecial: React.FC = () => {
                                 <div className="flex justify-between items-center text-sm text-gray-700">
                                     <span>⭐ {item.rating} ({item.reviews} reviews)</span>
                                     <a
-                                        href="https://wa.me/1234567890"
+                                        href={`https://wa.me/${WhatsAppNumber}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex items-center text-green-500 font-medium hover:underline"

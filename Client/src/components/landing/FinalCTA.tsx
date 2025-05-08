@@ -1,5 +1,6 @@
 // components/FinalCTA.tsx
 import React from "react";
+const WhatsAppNumber = import.meta.env.VITE_WHATSAPP_NUMBER
 
 export const FinalCTA: React.FC = () => {
     return (
@@ -13,7 +14,7 @@ export const FinalCTA: React.FC = () => {
 
             <div className="flex flex-col md:flex-row justify-center gap-4">
                 <a
-                    href="https://wa.me/919876543210?text=Hi%20HomeMeal%2C%20I%27d%20like%20to%20place%20an%20order%21"
+                    href={`https://wa.me/${WhatsAppNumber}?text=Hi%2C%20I%27d%20like%20to%20place%20an%20order%21`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full flex items-center justify-center gap-2"

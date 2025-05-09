@@ -5,9 +5,9 @@ const WhatsAppNumber = import.meta.env.VITE_WHATSAPP_NUMBER
 const HeroSection: React.FC = () => {
     return (
         <section
-            className="relative bg-cover bg-center bg-no-repeat min-h-[90dvh] flex items-center text-white"
+            className="relative py-22 bg-cover bg-center bg-no-repeat h-full flex items-center text-white"
             style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')`,
+                backgroundImage: `url('https://chaitanyafoodcourt.com/wp-content/uploads/2021/04/fresh-gourmet-meal-beef-taco-salad-plate-generated-by-ai-1920x1097.jpg')`,
             }}
         >
             {/* Overlay */}

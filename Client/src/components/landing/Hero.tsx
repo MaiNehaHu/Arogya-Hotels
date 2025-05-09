@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
             {/* Content */}
             <div className="relative z-10 container mx-auto px-6 py-24 text-center md:text-left">
                 <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
-                    Home–Cooked Meals <br className="hidden md:block" />
+                    Freshly–Cooked Meals <br className="hidden md:block" />
                     Delivered to Your Doorstep
                 </h1>
                 <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto md:mx-0">

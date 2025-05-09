@@ -1,4 +1,4 @@
-// components/AboutHomeMeal.tsx
+// components/AboutArogya Hotel.tsx
 // import React from "react";
 import { BsChatHeart } from "react-icons/bs";
 import { IoMdTimer } from "react-icons/io";
@@ -13,7 +13,7 @@ const AboutSection = () => {
                 <div className="w-full md:w-1/2">
                     <img
                         src="https://images.ctfassets.net/trvmqu12jq2l/4FNjVN4XJh6lH0cJE2Pa1b/d058a5d3de9ebfdc04137a8480089f16/BestIndianChicago_Mild2Spicy_group_feature.jpg?q=70&w=1208&h=1080&f=faces&fit=fill"
-                        alt="Delicious HomeMeal Dessert"
+                        alt="Delicious Arogya Hotel Dessert"
                         className="w-full rounded-xl shadow-lg object-cover"
                     />
                 </div>
@@ -21,10 +21,10 @@ const AboutSection = () => {
                 {/* Right: Content */}
                 <div className="w-full md:w-1/2 space-y-6">
                     <h2 className="text-4xl font-bold text-gray-900 mb-12">
-                        About HomeMeal
+                        About Arogya Hotel
                     </h2>
                     <p className="text-gray-700 leading-relaxed">
-                        HomeMeal started with a simple vision: to bring the authentic taste of home-cooked food to busy
+                        Arogya Hotel started with a simple vision: to bring the authentic taste of home-cooked food to busy
                         professionals and families who crave wholesome meals but lack the time to prepare them.
                     </p>
                     <p className="text-gray-700 leading-relaxed">

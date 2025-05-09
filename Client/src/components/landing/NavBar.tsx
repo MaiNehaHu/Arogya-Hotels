@@ -1,14 +1,16 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
-const WhatsAppNumber = import.meta.env.VITE_WHATSAPP_NUMBER
+import banner from '../../assets/banner.png'
+import logo from '../../assets/icon.png'
+const WhatsAppNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
 
 const Navbar: React.FC = () => {
     return (
         <header className="bg-white shadow-sm py-4 px-6 flex items-center justify-between">
             {/* Logo */}
             <div className="text-2xl font-bold">
-                <span className="text-gray-800">Home</span>
-                <span className="text-orange-500">Meal</span>
+                <img src={banner} alt="Arogya Hotel" className="h-10 hidden sm:block" />
+                <img src={logo} alt="Arogya Hotel" className="h-10 block sm:hidden" />
             </div>
 
             {/* Navigation Links */}

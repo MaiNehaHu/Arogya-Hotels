@@ -5,9 +5,12 @@ import { useEffect, useState } from "react";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { PiGear } from "react-icons/pi";
 import { Link, useLocation } from "react-router-dom";
+import Model from "../../layouts/Model";
+import CreateOrder from "./main/CreateOrder";
 
 const NavBar = () => {
   const [showDropDown, setShowDropDown] = useState(false);
+  const [showCreateOrderModal, setShowCreateOrderModal] = useState(false);
   const location = useLocation();
 
   const pathTitleMap: { [key: string]: string } = {
@@ -26,6 +29,16 @@ const NavBar = () => {
       <h1 className="text-lg font-medium">{currentTitle}</h1>
 
       <div className="flex flex-row gap-x-4">
+        <button onClick={() => setShowCreateOrderModal(true)} className="relative border border-orange-600 text-orange-500 font-semibold bg-orange-100 text-base py-2 px-4 rounded-full hover:bg-orange-500 hover:text-white transition-colors cursor-pointer">
+          Create Order
+        </button>
+
+        {showCreateOrderModal &&
+          <Model isOpen={showCreateOrderModal} onClose={() => setShowCreateOrderModal(false)}>
+            <CreateOrder />
+          </Model>
+        }
+
         <button className="relative border border-gray-600 text-base p-3 rounded-full hover:bg-black hover:text-white transition-colors cursor-pointer">
           <LuBell />
 

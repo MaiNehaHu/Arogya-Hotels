@@ -100,7 +100,7 @@ const DeliveryPartners = () => {
                                     <tr key={index}>
                                         <td className="py-3 px-10 text-sm text-nowrap">{partner.partner_id}</td>
                                         <td className="py-3 px-10 text-sm text-nowrap">
-                                            <div className={"px-3 py-1 rounded-full text-center text-white font-medium" + ` ${partner.status === "Available" ? "bg-green-500" : "bg-gray-500"}`}>{partner.status}</div>
+                                            <div className={"px-3 py-1 rounded-full text-center font-medium border" + ` ${partner.status === "Available" ? "border-green-500 bg-green-100 text-green-600" : "border-gray-500 bg-gray-100 text-black"}`}>{partner.status}</div>
                                         </td>
                                         <td className="py-3 px-10 text-sm text-nowrap">{partner.name}</td>
                                         <td className="py-3 px-10 text-sm text-nowrap">{partner.email}</td>

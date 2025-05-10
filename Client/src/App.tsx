@@ -5,7 +5,7 @@ import AdminLogin from './pages/Login';
 import AdminProfile from './pages/Profile';
 import Dashboard from './pages/Dashboard';
 import Orders from './pages/Orders';
-import DashboardLayout from './components/dashboard/DashboardLayout';
+import DashboardLayout from './layouts/DashboardLayout';
 import ErrorPage from './pages/ErrorPage';
 import DeliveryPartners from './pages/DeliveryPartners';
 import KOT from './pages/KOT';

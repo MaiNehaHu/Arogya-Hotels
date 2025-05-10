@@ -1,8 +1,12 @@
 // import React from 'react'
 
+import Overview from "../components/dashboard/main/Overview"
+
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <>
+      <Overview />
+    </>
   )
 }
 

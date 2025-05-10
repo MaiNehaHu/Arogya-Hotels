@@ -1,7 +1,7 @@
 // src/layouts/DashboardLayout.tsx
 import { Outlet } from 'react-router-dom';
-import Navbar from "./NavBar"
-import Sidebar from './SideBar'; // your actual sidebar path
+import Navbar from "../components/dashboard/NavBar"
+import Sidebar from '../components/dashboard/SideBar'; // your actual sidebar path
 
 const DashboardLayout = () => {
     return (
@@ -9,7 +9,7 @@ const DashboardLayout = () => {
             <Sidebar />
             <div className="flex-1 flex flex-col">
                 <Navbar />
-                <main className="p-4 overflow-auto">
+                <main className="p-6 overflow-auto">
                     <Outlet />
                 </main>
             </div>

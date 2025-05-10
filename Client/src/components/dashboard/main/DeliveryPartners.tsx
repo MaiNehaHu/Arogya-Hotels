@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { IoChevronDownOutline } from 'react-icons/io5';
+import { useEffect, useState } from 'react';
 import DropDown from '../DropDown';
 import { Link } from 'react-router-dom';
 import { PiDotsThreeOutlineVerticalFill } from 'react-icons/pi';
-import { RiRefreshLine } from 'react-icons/ri';
 
 const deliveryPartnerHeaders = [
     "Partner ID",
@@ -40,6 +38,8 @@ const samplePartners = [
 const DeliveryPartners = () => {
     const [status, setStatus] = useState("");
     const [showOptions, setShowOptions] = useState("");
+    console.log(status);
+
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -69,7 +69,7 @@ const DeliveryPartners = () => {
                 <section className="flex flex-row gap-4 items-center">
                     <div className="flex flex-row gap-2 items-center">
                         <p>Status:</p>
-                        <DropDown ArrayObj={["All Orders", "Preparing", "Out for Delivery", "Delivered", "Cancelled"]} setValue={setStatus} />
+                        <DropDown ArrayObj={["Available", "Busy", "Offline"]} setValue={setStatus} />
                     </div>
                     <Link to="/admin/orders">
                         <button className='border border-gray-300 rounded-xl py-2.5 px-3 text-sm font-medium hover:text-white hover:bg-orange-500 cursor-pointer transition-colors'>

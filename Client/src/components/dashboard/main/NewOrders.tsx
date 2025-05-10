@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { IoChevronDownOutline } from 'react-icons/io5';
+import { useState } from 'react';
 import DropDown from '../DropDown';
 import { Link } from 'react-router-dom';
-import { PiDotsThreeOutlineVerticalFill } from 'react-icons/pi';
 import { RiRefreshLine } from 'react-icons/ri';
 
 const orderHeaders = [
@@ -47,22 +45,10 @@ const sampleOrders = [
 
 const NewOrders = () => {
     const [status, setStatus] = useState("");
-    const [showOptions, setShowOptions] = useState("");
     const orders = sampleOrders;
 
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            const target = event.target as HTMLElement;
-            if (
-                !target.closest(".options-dropdown") &&
-                !target.closest(".options-button")
-            ) {
-                setShowOptions("");
-            }
-        };
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => document.removeEventListener("mousedown", handleClickOutside);
-    }, []);
+    console.log(status);
+    
 
     return (
         <div className='border border-gray-300 rounded-2xl p-3 mt-6'>
@@ -78,7 +64,7 @@ const NewOrders = () => {
                 <section className="flex flex-row gap-4 items-center">
                     <div className="flex flex-row gap-2 items-center">
                         <p>Status:</p>
-                        <DropDown ArrayObj={["All Orders", "Preparing", "Out for Delivery", "Delivered", "Cancelled"]} setValue={setStatus} />
+                        <DropDown ArrayObj={["Available", "Preparing", "Out for Delivery", "Delivered", "Cancelled"]} setValue={setStatus} />
                     </div>
                     <Link to="/admin/orders">
                         <button className='border border-gray-300 rounded-xl py-2.5 px-3 text-sm font-medium hover:text-white hover:bg-orange-500 cursor-pointer transition-colors'>
@@ -119,7 +105,6 @@ const NewOrders = () => {
                                         <td className="py-3 px-10 text-sm text-nowrap">{order.status}</td>
                                         <td className="py-3 px-4 text-sm text-nowrap text-gray-900 sticky right-0 bg-white z-10">
                                             <button
-                                                onClick={() => setShowOptions(order.order_id)}
                                                 disabled={!!order.assigned_to ? true : false}
                                                 className="border cursor-pointer border-blue-400 bg-blue-600 hover:bg-blue-700 font-medium text-white px-4 py-1 rounded-full options-button disabled:bg-gray-400 disabled:cursor-not-allowed"
                                             >

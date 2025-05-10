@@ -4,7 +4,7 @@ const CreateOrder = () => {
     const appearenNoneForNumber = " appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none";
 
     return (
-        <div className='border border-gray-300 rounded-2xl p-4'>
+        <div className='border border-gray-300 rounded-2xl p-4 bg-white'>
             <h1 className='text-lg font-semibold mb-2'>Create Order</h1>
 
             <section className="flex flex-col gap-y-4">

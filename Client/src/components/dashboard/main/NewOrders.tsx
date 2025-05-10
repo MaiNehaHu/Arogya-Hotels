@@ -51,7 +51,7 @@ const NewOrders = () => {
     
 
     return (
-        <div className='border border-gray-300 rounded-2xl p-3 mt-6'>
+        <div className='border border-gray-300 rounded-2xl p-3 mt-6 bg-white'>
             <header className="flex flex-row items-start justify-between p-1">
                 <section className="flex flex-row items-center gap-4">
                     <h1 className="text-lg font-medium">New Orders</h1>

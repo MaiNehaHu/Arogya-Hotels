@@ -45,7 +45,7 @@ const Overview = () => {
             {cards.map(({ name, value, percentage, icon, bgColor, subText }) => (
                 <div
                     key={name}
-                    className="flex flex-1 flex-col gap-3 border border-gray-200 rounded-xl p-4 bg-white shadow-sm"
+                    className="flex flex-1 flex-col gap-3 border border-gray-300 rounded-xl p-4 bg-white"
                 >
                     <div className={`w-10 h-10 rounded-full flex items-center justify-center ${bgColor}`}>
                         {icon}

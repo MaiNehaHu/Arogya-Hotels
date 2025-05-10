@@ -32,7 +32,7 @@ const AdminProfile: React.FC = () => {
     };
 
     return (
-        <div className="flex w-full p-10">
+        <div className="flex w-full mt-10 pr-10">
             {/* Main Content */}
             {/* <h1 className="text-2xl font-semibold text-gray-800 mb-6">Admin Profile</h1> */}
 

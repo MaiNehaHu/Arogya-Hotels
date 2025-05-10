@@ -4,14 +4,26 @@ import icon from "../../assets/icon.png";
 import { useEffect, useState } from "react";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { PiGear } from "react-icons/pi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const NavBar = () => {
   const [showDropDown, setShowDropDown] = useState(false);
+  const location = useLocation();
+
+  const pathTitleMap: { [key: string]: string } = {
+    '/admin/dashboard': 'Dashboard',
+    '/admin/settings': 'Settings',
+    '/admin/profile': 'Profile',
+    '/admin/orders': 'Orders',
+    '/admin/delivery-partners': 'Delivery Partners',
+    '/admin/kot-management': 'KOT Management',
+  };
+
+  const currentTitle = pathTitleMap[location.pathname] || 'Dashboard';
 
   return (
     <div className="h-[10vh] border-b border-gray-300 flex items-center justify-between px-10">
-      <h1 className="text-lg font-medium">Dashboard</h1>
+      <h1 className="text-lg font-medium">{currentTitle}</h1>
 
       <div className="flex flex-row gap-x-4">
         <button className="relative border border-gray-600 text-base p-3 rounded-full hover:bg-black hover:text-white transition-colors cursor-pointer">
